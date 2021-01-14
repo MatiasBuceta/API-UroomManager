@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matias\\source\\repos\\UroomManager\\UroomManager\\UroomManager.csproj": {}
+    "D:\\GitHub\\API-UroomManager\\API-UroomManager\\UroomManager\\UroomManager\\UroomManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matias\\source\\repos\\UroomManager\\UroomManager\\UroomManager.csproj": {
+    "D:\\GitHub\\API-UroomManager\\API-UroomManager\\UroomManager\\UroomManager\\UroomManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matias\\source\\repos\\UroomManager\\UroomManager\\UroomManager.csproj",
+        "projectUniqueName": "D:\\GitHub\\API-UroomManager\\API-UroomManager\\UroomManager\\UroomManager\\UroomManager.csproj",
         "projectName": "UroomManager",
-        "projectPath": "C:\\Users\\Matias\\source\\repos\\UroomManager\\UroomManager\\UroomManager.csproj",
+        "projectPath": "D:\\GitHub\\API-UroomManager\\API-UroomManager\\UroomManager\\UroomManager\\UroomManager.csproj",
         "packagesPath": "C:\\Users\\Matias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matias\\source\\repos\\UroomManager\\UroomManager\\obj\\",
+        "outputPath": "D:\\GitHub\\API-UroomManager\\API-UroomManager\\UroomManager\\UroomManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matias\\AppData\\Roaming\\NuGet\\NuGet.Config",
