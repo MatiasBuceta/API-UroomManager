@@ -36,6 +36,7 @@ D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\UroomManager.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\ref\UroomManager.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\UroomManager.pdb
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\Dapper.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\Microsoft.OpenApi.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll

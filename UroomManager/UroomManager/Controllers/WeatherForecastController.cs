@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UroomManager.Entities;
 
 namespace UroomManager.Controllers
 {
@@ -22,7 +23,7 @@ namespace UroomManager.Controllers
         {
             _logger = logger;
         }
-
+        [Route("get/asd")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -35,5 +36,14 @@ namespace UroomManager.Controllers
             })
             .ToArray();
         }
+
+        [Route("post/{id}")]
+        [HttpPost]
+        public Sala Test(int id, [FromBody] Sala sala) {
+
+            return sala;
+        
+        }
+
     }
 }

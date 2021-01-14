@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gmyyTnROTPzvnguWrMevqR6UktZ76rXevfiX8M145XOTO954K+BzypdiNtrn0nBjI93iEi6Ptl61Ad6RgiP84g==",
+  "dgSpecHash": "1JRYN0v5KBB4VOiRE2PeFkJPLOXbqrnmvTwCeOEpIv/GWOS20cIpmz91wDvEyvTLCTYY1tTaJhMl43IjvU1ZFQ==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\API-UroomManager\\API-UroomManager\\UroomManager\\UroomManager\\UroomManager.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Matias\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\Matias\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Matias\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Matias\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
