@@ -16,10 +16,12 @@ namespace UroomManager.Controllers
     [ApiController]
     public class ABMController : ControllerBase
     {
-        private TestService testService;
+        ///private TestService testService;
+        private RoomService roomService;
         public ABMController()
         {
-            testService = new TestService();
+            ///testService = new TestService();
+            roomService = new RoomService();
         }
 
         // GET: api/<ValuesController>
@@ -37,23 +39,26 @@ namespace UroomManager.Controllers
         }
 
         // POST api/<ABMController>
-        [Route("CreateTest")]
+        [Route("Create")]
         [HttpPost]
-        public void Create()
+        public void Create([FromBody] Room room)
         {
-            testService.testServicePost();
+            ///testService.testServicePost();
+            roomService.roomServicePost(room);
         }
 
         // PUT api/<ABMController>/5
         [HttpPut("{id}")]
-        public void Edit(int id, [FromBody] string value)
+        public void Edit(int id, [FromBody] Room room)
         {
+            roomService.roomServicePut(id, room);
         }
 
         // DELETE api/<ABMController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            roomService.roomServiceDelete(id);
         }
     }
 }

@@ -41,11 +41,11 @@ namespace UroomManager.Controllers
 
         [Route("post/{id}")]
         [HttpPost]
-        public Room Test(int id, [FromBody] Room sala) {
+        public Room Test(int id, [FromBody] Room room) {
 
-            sala.Id = id;
+            room.Id = id;
 
-            string connection =
+            /*string connection =
                 @"Data Source=DESKTOP-DKBV2B9\SQLEXPRESS;Initial Catalog=URmanager;Integrated Security=SSPI";
 
             using (var db = new SqlConnection(connection)) 
@@ -54,8 +54,12 @@ namespace UroomManager.Controllers
             }
 
 
-                return sala;
-        
+                return sala;*/
+
+            
+
+            return room;
+
         }
 
         [Route("get/Test")]

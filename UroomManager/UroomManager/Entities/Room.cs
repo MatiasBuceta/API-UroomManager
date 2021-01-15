@@ -10,8 +10,8 @@ namespace UroomManager.Entities
         public int Id { get; set; }
         public string RoomName { get; set; }
         public int Capacity { get; set; }
-        public bool Projector { get; set; }
-        public bool Blackboard { get; set; }
-        public bool Internet { get; set; }
+        public int Projector { get; set; }
+        public int Blackboard { get; set; }
+        public int Internet { get; set; }
     }
 }
