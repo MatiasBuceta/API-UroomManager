@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using UroomManager.Entities;
@@ -39,10 +41,40 @@ namespace UroomManager.Controllers
 
         [Route("post/{id}")]
         [HttpPost]
-        public Sala Test(int id, [FromBody] Sala sala) {
+        public Room Test(int id, [FromBody] Room sala) {
 
-            return sala;
+            sala.Id = id;
+
+            string connection =
+                @"Data Source=DESKTOP-DKBV2B9\SQLEXPRESS;Initial Catalog=URmanager;Integrated Security=SSPI";
+
+            using (var db = new SqlConnection(connection)) 
+            {
+                var sql = "select ID,Name from TestTable";
+            }
+
+
+                return sala;
         
+        }
+
+        [Route("get/Test")]
+        [HttpGet]
+        public IEnumerable<Test> GetTest()
+        {   
+            string connection =
+                @"Data Source=DESKTOP-DKBV2B9\SQLEXPRESS;Initial Catalog=URmanager;Integrated Security=SSPI";
+
+            using (var db = new SqlConnection(connection))
+            {
+                var sql = "select ID,Name from TestTable";
+                var lst = db.Query<Test>(sql);
+                foreach (var oElement in lst) {
+                    Console.WriteLine(oElement.Name);
+                }
+                return lst;
+            }
+            
         }
 
     }

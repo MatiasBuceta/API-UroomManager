@@ -41,7 +41,12 @@ D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.csprojAssemblyReference.cache
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\System.Data.SqlClient.dll
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.GeneratedMSBuildEditorConfig.editorconfig
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.AssemblyInfoInputs.cache
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.AssemblyInfo.cs
@@ -57,3 +62,4 @@ D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\ref\UroomManager.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.pdb
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.genruntimeconfig.cache
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.csprojAssemblyReference.cache

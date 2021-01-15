@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace UroomManager.Entities
 {
-    public class Sala
+    public class Room
     {
         public int Id { get; set; }
-        public int Capacidad { get; set; }
-        public bool Proyector { get; set; }
-        public bool Pizzara { get; set; }
+        public string RoomName { get; set; }
+        public int Capacity { get; set; }
+        public bool Projector { get; set; }
+        public bool Blackboard { get; set; }
         public bool Internet { get; set; }
     }
 }
