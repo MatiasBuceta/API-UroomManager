@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using UroomManager.Entities;
 
 namespace UroomManager.Controllers
 {
@@ -13,7 +16,7 @@ namespace UroomManager.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Tinchito", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -22,7 +25,7 @@ namespace UroomManager.Controllers
         {
             _logger = logger;
         }
-
+        [Route("get/asd")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -35,5 +38,48 @@ namespace UroomManager.Controllers
             })
             .ToArray();
         }
+
+        [Route("post/{id}")]
+        [HttpPost]
+        public Room Test(int id, [FromBody] Room room) {
+
+            room.Id = id;
+
+            /*string connection =
+                @"Data Source=DESKTOP-DKBV2B9\SQLEXPRESS;Initial Catalog=URmanager;Integrated Security=SSPI";
+
+            using (var db = new SqlConnection(connection)) 
+            {
+                var sql = "select ID,Name from TestTable";
+            }
+
+
+                return sala;*/
+
+            
+
+            return room;
+
+        }
+
+        [Route("get/Test")]
+        [HttpGet]
+        public IEnumerable<Test> GetTest()
+        {   
+            string connection =
+                @"Data Source=DESKTOP-DKBV2B9\SQLEXPRESS;Initial Catalog=URmanager;Integrated Security=SSPI";
+
+            using (var db = new SqlConnection(connection))
+            {
+                var sql = "select ID,Name from TestTable";
+                var lst = db.Query<Test>(sql);
+                foreach (var oElement in lst) {
+                    Console.WriteLine(oElement.Name);
+                }
+                return lst;
+            }
+            
+        }
+
     }
 }
