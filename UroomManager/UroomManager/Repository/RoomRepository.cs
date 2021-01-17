@@ -18,7 +18,8 @@ namespace UroomManager.Repository
 
             using (var db = new SqlConnection(connection))
             {
-                var sqlinsert = "insert into RoomTable(RoomName,Capacity,Projector,Blackboard,Internet) Values(@roomname, @capacity, @projector, @blackboard, @internet)";
+                var sqlinsert = "insert into RoomTable(RoomName,Capacity,Projector,Blackboard,Internet) " +
+                    "Values(@roomname, @capacity, @projector, @blackboard, @internet)";
                 var result = db.Execute(sqlinsert, new { roomname = room.RoomName,capacity = room.Capacity,projector = room.Projector,blackboard = room.Blackboard,internet = room.Internet });
             }
         }
@@ -27,7 +28,8 @@ namespace UroomManager.Repository
         {
             using (var db = new SqlConnection(connection))
             {
-                var sqldelete = "delete from RoomTable where Id = @id";
+                var sqldelete = "delete from RoomTable " +
+                    "where Id = @id";
                 var result = db.Execute(sqldelete, new { Id = id });
             }
         }
@@ -36,9 +38,54 @@ namespace UroomManager.Repository
             room.Id = id;
             using (var db = new SqlConnection(connection))
             {
-                var sqledit = "update RoomTable set roomname=@roomname, capacity=@capacity, projector=@projector, blackboard=@blackboard, internet=@internet where Id=@id";
+                var sqledit = "update RoomTable " +
+                    "set roomname=@roomname, " +
+                    "capacity=@capacity, " +
+                    "projector=@projector, " +
+                    "blackboard=@blackboard, " +
+                    "internet=@internet " +
+                    "where Id=@id";
                 var result = db.Execute(sqledit, new { id = room.Id, roomname = room.RoomName, capacity = room.Capacity, projector = room.Projector, blackboard = room.Blackboard, internet = room.Internet });
             }
         }
+
+        public List<Room> roomsSpecSearch(Room room)
+        {
+            List<Room> roomlst = new List<Room>();
+            using (var db = new SqlConnection(connection))
+            {
+                var sqlsearch = "select Id,RoomName,Capacity,Projector,Blackboard,Internet from RoomTable " +
+                    "where capacity>=@capacity " +
+                    "and projector=@projector " +
+                    "and blackboard=@blackboard " +
+                    "and internet=@internet";
+                var lst = db.Query<Room>(sqlsearch, new { capacity = room.Capacity, projector = room.Projector, blackboard = room.Blackboard, internet = room.Internet });
+                foreach (var r in lst)
+                {
+                    roomlst.Add(r);
+                }
+            }
+            return roomlst;
+        }
+        public List<Room> roomsOptSearch(Room room)
+        {
+            List<Room> roomlst = new List<Room>();
+            using (var db = new SqlConnection(connection))
+            {
+                var sqlsearch = "select Id,RoomName,Capacity,Projector,Blackboard,Internet from RoomTable " +
+                    "where capacity>=@capacity " +
+                    "and projector>=@projector " +
+                    "and blackboard>=@blackboard " +
+                    "and internet>=@internet";
+                var lst = db.Query<Room>(sqlsearch, new { capacity = room.Capacity, projector = room.Projector, blackboard = room.Blackboard, internet = room.Internet });
+                foreach (var r in lst)
+                {
+                    roomlst.Add(r);
+                }
+            }
+            return roomlst;
+        }
+
+
     }
 }

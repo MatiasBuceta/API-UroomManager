@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UroomManager.Entities;
+using UroomManager.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,9 +14,17 @@ namespace UroomManager.Controllers
     [ApiController]
     public class ReservationController : ControllerBase
     {
-        // GET: api/<ReservationController>
+        private ReservationService reservationService;
+        private RoomService roomService;
+        public ReservationController()
+        {
+            reservationService = new ReservationService();
+            roomService = new RoomService();
+        }
+
+        ///GET: api/<ReservationController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> GetOptimalReservation([FromBody] Room room, DateTime date)
         {
             return new string[] { "value1", "value2" };
         }
@@ -31,6 +41,26 @@ namespace UroomManager.Controllers
         public void Post([FromBody] string value)
         {
         }
+
+        [Route("OptimalSearch")]
+        [HttpPost]
+        public IEnumerable<Room> GetOptimalReservationPost([FromBody] OptReservation optreservation)
+        {
+
+            Room room = new Room();
+            room.Capacity = optreservation.Capacity;
+            room.Projector = optreservation.Projector;
+            room.Blackboard = optreservation.Blackboard;
+            room.Internet = optreservation.Internet;
+            string date = optreservation.ReservationDate;
+            string starttime = optreservation.ReservationStartTime;
+            string endtime = optreservation.ReservationEndTime;
+
+            List<Room> roomlst= reservationService.optimalReservations(room, date, starttime, endtime);
+
+            return roomlst;
+        }
+
 
         // PUT api/<ReservationController>/5
         [HttpPut("{id}")]
