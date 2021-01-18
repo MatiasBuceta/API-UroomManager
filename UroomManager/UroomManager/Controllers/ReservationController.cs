@@ -23,18 +23,18 @@ namespace UroomManager.Controllers
         }
 
         // GET: api/<ReservationController>
-        [HttpGet]
+        /*[HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
-        }
+        }*/
 
         // GET api/<ReservationController>/5
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
-        }
+        }*/
 
         // POST api/<ReservationController>
         [Route("CreateReservation")]
@@ -45,10 +45,10 @@ namespace UroomManager.Controllers
         }
 
         // PUT api/<ReservationController>/5
-        [HttpPut("{id}")]
+        /*[HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
-        }
+        }*/
 
         // DELETE api/<ReservationController>/5
         [Route("DeleteReservation/{id}")]
