@@ -12,17 +12,17 @@ namespace UroomManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ReservationController : ControllerBase
+    public class OptimalReservationController : ControllerBase
     {
-
         private ReservationService reservationService;
-
-        public ReservationController()
+        private RoomService roomService;
+        public OptimalReservationController()
         {
             reservationService = new ReservationService();
+            roomService = new RoomService();
         }
 
-        // GET: api/<ReservationController>
+        ///GET: api/<ReservationController>
         [HttpGet]
         public IEnumerable<string> Get()
         {
@@ -37,12 +37,25 @@ namespace UroomManager.Controllers
         }
 
         // POST api/<ReservationController>
-        [Route("CreateReservation")]
+        [Route("OptimalSearch")]
         [HttpPost]
-        public void CreateReservationPost([FromBody] Reservation reservation)
+        public IEnumerable<Room> GetOptimalReservationPost([FromBody] OptReservation optreservation)
         {
-            reservationService.reservationServicePost(reservation);
+
+            Room room = new Room();
+            room.Capacity = optreservation.Capacity;
+            room.Projector = optreservation.Projector;
+            room.Blackboard = optreservation.Blackboard;
+            room.Internet = optreservation.Internet;
+            string date = optreservation.ReservationDate;
+            string starttime = optreservation.ReservationStartTime;
+            string endtime = optreservation.ReservationEndTime;
+
+            List<Room> roomlst= reservationService.optimalReservations(room, date, starttime, endtime);
+
+            return roomlst;
         }
+
 
         // PUT api/<ReservationController>/5
         [HttpPut("{id}")]
@@ -51,11 +64,9 @@ namespace UroomManager.Controllers
         }
 
         // DELETE api/<ReservationController>/5
-        [Route("DeleteReservation/{id}")]
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            reservationService.reservationServiceDelete(id);
         }
     }
 }

@@ -15,7 +15,6 @@ namespace UroomManager.Repository
 
         public void roomInsert(Room room)
         {
-
             using (var db = new SqlConnection(connection))
             {
                 var sqlinsert = "insert into RoomTable(RoomName,Capacity,Projector,Blackboard,Internet) " +

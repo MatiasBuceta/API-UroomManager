@@ -18,6 +18,15 @@ namespace UroomManager.Services
             roomRepository = new RoomRepository();
         }
 
+        public void reservationServicePost(Reservation reservation)
+        {
+            reservationRepository.reservationInsert(reservation);
+        }
+
+        public void reservationServiceDelete(int id)
+        {
+            reservationRepository.reservationDelete(id);
+        }
         public List<Room> optimalReservations(Room room, string date, string starttime, string endtime) 
         {
             List<Room> roomlst = new List<Room>();
@@ -39,7 +48,7 @@ namespace UroomManager.Services
             {
                 reservationlst.AddRange(reservationRepository.reservationsSearch(rooml.Id, date));
             }
-            reservationlst = TimeFilter(reservationlst, starttime, endtime);
+            reservationlst = RoomTimeFilter(reservationlst, starttime, endtime);
             
             List<int> roomids = new List<int>();
             List<int> reservationids = new List<int>();
@@ -67,7 +76,7 @@ namespace UroomManager.Services
             return finalroomlst;
         }
 
-        public List<Reservation> TimeFilter(List<Reservation> reservationlst, string starttime, string endtime) 
+        public List<Reservation> RoomTimeFilter(List<Reservation> reservationlst, string starttime, string endtime) 
         {
 
             List<Reservation> postreservationlist = new List<Reservation>();
