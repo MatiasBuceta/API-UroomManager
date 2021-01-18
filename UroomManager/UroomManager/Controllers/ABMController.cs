@@ -25,21 +25,21 @@ namespace UroomManager.Controllers
         }
 
         // GET: api/<ValuesController>
-        [HttpGet]
+        /*[HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
-        }
+        }*/
 
         // GET api/<ValuesController>/5
-        [HttpGet("{id}")]
+        /*[HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
-        }
+        }*/
 
         // POST api/<ABMController>
-        [Route("Create")]
+        [Route("CreateRoom")]
         [HttpPost]
         public void Create([FromBody] Room room)
         {
@@ -48,14 +48,16 @@ namespace UroomManager.Controllers
         }
 
         // PUT api/<ABMController>/5
-        [HttpPut("{id}")]
+        [Route("EditRoom/{id}")]
+        [HttpPut]
         public void Edit(int id, [FromBody] Room room)
         {
             roomService.roomServicePut(id, room);
         }
 
         // DELETE api/<ABMController>/5
-        [HttpDelete("{id}")]
+        [Route("DeleteRoom/{id}")]
+        [HttpDelete]
         public void Delete(int id)
         {
             roomService.roomServiceDelete(id);
