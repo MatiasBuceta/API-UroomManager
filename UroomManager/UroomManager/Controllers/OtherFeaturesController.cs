@@ -12,11 +12,11 @@ namespace UroomManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OptimalReservationController : ControllerBase
+    public class OtherFeaturesController : ControllerBase
     {
         private ReservationService reservationService;
         private RoomService roomService;
-        public OptimalReservationController()
+        public OtherFeaturesController()
         {
             reservationService = new ReservationService();
             roomService = new RoomService();
@@ -54,6 +54,13 @@ namespace UroomManager.Controllers
             List<Room> roomlst= reservationService.optimalReservations(room, date, starttime, endtime);
 
             return roomlst;
+        }
+
+        [Route("ReservationReport")]
+        [HttpPost]
+        public void ReservationReportPost([FromBody] Reservation reservation)
+        {
+            
         }
 
 
