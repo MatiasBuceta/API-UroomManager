@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace UroomManager.Entities
 {
-    public class Test
+    public class ReportDateEntry
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
     }
 }

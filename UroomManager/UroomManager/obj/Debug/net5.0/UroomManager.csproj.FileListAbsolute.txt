@@ -62,3 +62,4 @@ D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\ref\UroomManager.dll
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.pdb
 D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.genruntimeconfig.cache
+D:\GitHub\API-UroomManager\API-UroomManager\UroomManager\UroomManager\obj\Debug\net5.0\UroomManager.csprojAssemblyReference.cache
