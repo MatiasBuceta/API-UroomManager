@@ -22,20 +22,7 @@ namespace UroomManager.Controllers
             roomService = new RoomService();
         }
 
-        ///GET: api/<ReservationController>
-        /*[HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }*/
-
-        // GET api/<ReservationController>/5
-        /*[HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }*/
-
+        
         // POST api/<ReservationController>
         [Route("OptimalSearch")]
         [HttpPost]
@@ -56,24 +43,5 @@ namespace UroomManager.Controllers
             return roomlst;
         }
 
-        [Route("ReservationReport")]
-        [HttpPost]
-        public void ReservationReportPost([FromBody] Reservation reservation)
-        {
-            
-        }
-
-
-        // PUT api/<ReservationController>/5
-        /*[HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }*/
-
-        // DELETE api/<ReservationController>/5
-        /*[HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }*/
     }
 }

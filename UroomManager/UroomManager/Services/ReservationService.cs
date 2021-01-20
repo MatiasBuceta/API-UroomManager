@@ -76,6 +76,14 @@ namespace UroomManager.Services
             return finalroomlst;
         }
 
+        public List<ReservationReport> reservationReport(ReportDateEntry reportdataentry)
+        {
+            
+            List<ReservationReport> reservationreport = reservationRepository.reservationReportSearch(reportdataentry);
+
+            return reservationreport;
+        }
+
         public List<Reservation> RoomTimeFilter(List<Reservation> reservationlst, string starttime, string endtime) 
         {
 
