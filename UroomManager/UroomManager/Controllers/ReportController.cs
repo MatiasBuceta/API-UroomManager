@@ -12,30 +12,24 @@ namespace UroomManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ReservationController : ControllerBase
+    public class ReportController : ControllerBase
     {
-
         private ReservationService reservationService;
-
-        public ReservationController()
+        public ReportController()
         {
             reservationService = new ReservationService();
         }
 
-        // POST api/<ReservationController>
-        [Route("CreateReservation")]
+
+        // POST api/<ReportController>
+        [Route("ReservationReport")]
         [HttpPost]
-        public void CreateReservationPost([FromBody] Reservation reservation)
+        ///public void ReservationReportPost([FromBody] string startdate, string enddate)
+        public IEnumerable<ReservationReport> ReservationReportPost([FromBody] ReportDateEntry reportdataentry)
         {
-            reservationService.reservationServicePost(reservation);
+            List<ReservationReport> reportlst= reservationService.reservationReport(reportdataentry);
+            return reportlst;
         }
 
-        // DELETE api/<ReservationController>/5
-        [Route("DeleteReservation/{id}")]
-        [HttpDelete]
-        public void Delete(int id)
-        {
-            reservationService.reservationServiceDelete(id);
-        }
     }
 }

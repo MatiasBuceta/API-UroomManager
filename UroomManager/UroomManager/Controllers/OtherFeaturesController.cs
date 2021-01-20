@@ -12,30 +12,17 @@ namespace UroomManager.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OptimalReservationController : ControllerBase
+    public class OtherFeaturesController : ControllerBase
     {
         private ReservationService reservationService;
         private RoomService roomService;
-        public OptimalReservationController()
+        public OtherFeaturesController()
         {
             reservationService = new ReservationService();
             roomService = new RoomService();
         }
 
-        ///GET: api/<ReservationController>
-        /*[HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }*/
-
-        // GET api/<ReservationController>/5
-        /*[HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }*/
-
+        
         // POST api/<ReservationController>
         [Route("OptimalSearch")]
         [HttpPost]
@@ -56,17 +43,5 @@ namespace UroomManager.Controllers
             return roomlst;
         }
 
-
-        // PUT api/<ReservationController>/5
-        /*[HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }*/
-
-        // DELETE api/<ReservationController>/5
-        /*[HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }*/
     }
 }
